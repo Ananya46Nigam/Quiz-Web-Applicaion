@@ -1,0 +1,80 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Quiz Web Application</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Quiz Web Application</h1>
+      <hr />
+      <h2>Modify Question</h2>
+
+      <form
+        action="#"
+        th:action="@{/saveQuestion}"
+        th:object="${Quiz}"
+        method="POST"
+      >
+        <!-- Add hidden field to handle update -->
+
+        <input type="hidden" th:field="*{id}" />
+        <input
+          type="number"
+          th:field="*{id}"
+          placeholder="Question Number"
+          class="form-control mb-4 col-4"
+        />
+        <input
+          type="text"
+          th:field="*{question}"
+          placeholder="Question"
+          class="form-control mb-4 col-4"
+        />
+        <input
+          type="text"
+          th:field="*{option_a}"
+          placeholder="Option A"
+          class="form-control mb-4 col-4"
+        />
+        <input
+          type="text"
+          th:field="*{option_b}"
+          placeholder="Option B"
+          class="form-control mb-4 col-4"
+        />
+        <input
+          type="text"
+          th:field="*{option_c}"
+          placeholder="Option C"
+          class="form-control mb-4 col-4"
+        />
+        <input
+          type="text"
+          th:field="*{option_d}"
+          placeholder="Option D"
+          class="form-control mb-4 col-4"
+        />
+        <input
+          type="text"
+          th:field="*{correct_answer}"
+          placeholder="Correct Answer"
+          class="form-control mb-4 col-4"
+        />
+
+        <button type="submit" class="btn btn-info col-2">
+          Update Question
+        </button>
+      </form>
+
+      <hr />
+      <a th:href="@{/}"> Back to MCQ List</a>
+    </div>
+  </body>
+</html>
