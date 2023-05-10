@@ -10,7 +10,9 @@ To run this Application :
 1.Clone this repository 
 
 
-2.Go to location: Quiz-Web-Applicaion/demo/src/main/java/com/example/SpringBootWebApplication/SpringBootThymeleafWebApplication.java
+2.Go to location: 
+
+Quiz-Web-Applicaion/demo/src/main/java/com/example/SpringBootWebApplication/SpringBootThymeleafWebApplication.java
 
 
 3.If you are using IDE click on "Run Java"
